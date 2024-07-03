@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"time"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -56,7 +57,7 @@ func main() {
 		json.Unmarshal(body, &response)
 		match, _ := regexp.MatchString("([0-9- ]{15,16})", message.MessageText())
 		if match != false {
-
+			time.Sleep(8 * time.Second)
 			// client.SendMessage("dumpccs1", message.MessageText())
 			client.SendMessage("rescrape", fmt.Sprintf("%s\nBIN %s\n%s-%s-%s\n%s\n%s\n%s", message.MessageText(), x[0][:6], response.Type, response.Brand, response.Level, response.Bank, response.Country, response.Flag))
 			return nil
