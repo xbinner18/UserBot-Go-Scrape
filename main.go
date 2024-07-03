@@ -65,5 +65,10 @@ func main() {
 		return nil
 	})
 
+	client.AddMessageHandler("/start", func(m *telegram.NewMessage) error {
+		m.Reply("Hello from CC Scrapper!") // m.Respond("...")
+		return nil
+	})
+
 	client.Idle() // block main goroutine until client is closed
 }
