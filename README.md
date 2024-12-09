@@ -11,4 +11,4 @@ Then Auth For login by putting code and 2fta password.
 `go run main.go`
 
 ## Donate me
-contact (https://telegram.dog/Nitin_181
+contact [Author](https://telegram.dog/Nitin_181)
