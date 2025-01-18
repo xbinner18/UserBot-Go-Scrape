@@ -59,7 +59,7 @@ func main() {
 		if match != false {
 			time.Sleep(8 * time.Second)
 			// client.SendMessage("dumpccs1", message.MessageText())
-			client.SendMessage("rescrape", fmt.Sprintf("%s\nBIN %s\n%s-%s-%s\n%s\n%s\n%s", message.MessageText(), x[0][:6], response.Type, response.Brand, response.Level, response.Bank, response.Country, response.Flag))
+			client.SendMessage("dumpccs1", fmt.Sprintf("%s\nBIN %s\n%s-%s-%s\n%s\n%s\n%s", message.MessageText(), x[0][:6], response.Type, response.Brand, response.Level, response.Bank, response.Country, response.Flag))
 			return nil
 		}
 
